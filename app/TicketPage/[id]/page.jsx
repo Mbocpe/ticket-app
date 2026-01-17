@@ -1,6 +1,7 @@
-const TicketPage = ({params}) => {
+async function TicketPage({params}) {
+  const {id} = await params
   return (
-    <div>TicketPage {params.id}</div>
+    <div>TicketPage {id}</div>
   )
 }
 
