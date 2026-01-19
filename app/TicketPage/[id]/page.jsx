@@ -1,7 +1,9 @@
+import TicketForm from "@/app/(components)/TicketForm"
+
 async function TicketPage({params}) {
-  const {id} = await params
+  // const {id} = await params
   return (
-    <div>TicketPage {id}</div>
+    <TicketForm/>
   )
 }
 
