@@ -1,31 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A full-stack ticketing application built with **Next.js** and **MongoDB** that allows users to create, view, update, and manage support tickets. The app demonstrates modern React patterns, API routes, and database integration using Mongoose.
+
+## Features
+
+- Create, view, update, and delete tickets
+- Server-side API routes using Next.js App Router
+- MongoDB database with Mongoose models
+- Clean and responsive UI
+- Environment-based configuration
+- Error handling and validation
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+git clone https://github.com/Mbocpe/ticket-app.git
+cd ticket-app
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Create a `.env.local` file in the root directory and add:
 
-## Learn More
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/TicketDB
+```
 
-To learn more about Next.js, take a look at the following resources:
+## API Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Method | Endpoint           | Description         |
+| ------ | ------------------ | ------------------- |
+| GET    | `/api/tickets`     | Get all tickets     |
+| POST   | `/api/tickets`     | Create a new ticket |
+| PUT    | `/api/tickets/:id` | Update a ticket     |
+| DELETE | `/api/tickets/:id` | Delete a ticket     |
 
 ## Deploy on Vercel
 

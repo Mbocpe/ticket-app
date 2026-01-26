@@ -29,7 +29,7 @@ export async function PUT(req, {params}) {
         const body = await req.json();
         const ticketData = body.formData
 
-        const updateTicketData = await Ticket.findByIdAndUpdate(id, {...ticketData});
+        await Ticket.findByIdAndUpdate(id, {...ticketData});
 
         return NextResponse.json({message: "Successful update"}, {status: 200});
     } catch (err) {
