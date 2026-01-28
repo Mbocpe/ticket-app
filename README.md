@@ -22,7 +22,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 Create a `.env.local` file in the root directory and add:
 
