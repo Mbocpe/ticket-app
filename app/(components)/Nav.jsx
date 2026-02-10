@@ -14,7 +14,7 @@ const Nav = () => {
             </Link>
         </div>
         <div>
-            <p className="text-default-text">placeholder</p>
+            <p className="text-default-text">Khoi</p>
         </div>
     </nav>
   )

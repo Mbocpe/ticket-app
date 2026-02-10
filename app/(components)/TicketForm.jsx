@@ -81,7 +81,7 @@ const TicketForm = ({ticket}) => {
             />
 
             <label>Description</label>
-            <input
+            <textarea
                 name="description"
                 type="text"
                 onChange={handleChange}
