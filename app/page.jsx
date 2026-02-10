@@ -3,7 +3,7 @@ import TicketCard from "./(components)/TicketCard"
 
 const getTickets = async () => {
   try {
-    const res = await fetch(`${process.env.NEXT_BASE_URL}/api/Tickets`, {
+    const res = await fetch(`/api/Tickets`, {
       cache: "no-store"
     })
     return res.json()
@@ -13,7 +13,14 @@ const getTickets = async () => {
 }
 
 const Dashboard = async () => {
-  const {tickets} = await getTickets();
+  const data = await getTickets();
+
+  if (!data?.tickets) {
+    return <p>No tickets.</p>;
+  }
+
+  const tickets = data.tickets;
+
   const uniqueCategories = [
     ... new Set(tickets?.map(({category}) => category))
   ]
